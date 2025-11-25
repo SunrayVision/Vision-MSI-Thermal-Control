@@ -21,6 +21,33 @@ I embarked on a year-long reverse engineering journey to:
 - Implement proper battery charge threshold management
 - Create a reliable background daemon for continuous operation
 
+## 🛠️ Development Notes
+
+This project was developed following modern development practices where AI tools assist with code implementation, while all architectural decisions, reverse engineering, and problem solving remain human-driven.
+
+### Human Work:
+- **Reverse Engineering**: Embedded Controller address mapping and protocol analysis
+- **System Architecture**: Daemon design, GUI structure, and system integration
+- **Problem Solving**: Identifying thermal issues and designing solutions
+- **Testing & Validation**: Months of manual testing and temperature monitoring
+- **Documentation**: Technical specifications and user guides
+
+### AI-Assisted Work:
+- Code implementation and syntax assistance
+- Debugging support and error resolution
+- Documentation formatting and structure
+
+### Credit Distribution:
+- **Reverse Engineering & Architecture**: 100% human work
+- **Problem Identification & Solution Design**: 100% human work  
+- **EC Address Mapping**: 100% human work (0x68, 0x80, 0xbf, etc.)
+- **Code Implementation**: AI-assisted development
+- **Testing & Validation**: 100% human work
+
+> *"The AI didn't know my EC addresses were 0x68 for CPU temp and 0xbf for battery - I discovered those through extensive reverse engineering and testing!"*
+
+This approach mirrors how professional developers use tools like GitHub Copilot today - as assistants that implement solutions for human-identified problems.
+
 ## 📊 Results Achieved
 
 - **Temperature Improvement**: Reduced idle temperatures from 80°C+ to **55°-65°C range**
@@ -42,10 +69,23 @@ While not the most visually stunning application, it provides practical control 
 - **CPU Governor**: Requires `cpufrequtils` with performance governor for optimal operation
 - **Inspiration**: Based on functionality from MSI's "MSI Center" Windows application
 
-## 🚀 Installation
+## 💡 For Other MSI Users
 
-The project includes an installer script for easy deployment on compatible systems.
+This project is specifically tuned for MSI Modern 15H AI C1MGT-096IT.  
+If you have a different MSI model, the EC addresses will likely need adjustment.
+
+The core architecture should work - you'll just need to map your specific hardware addresses.
+
+## 🔧 For Developers
+
+The project structure is designed to be adaptable. While I can't provide active support for other models, the code is well-documented for those who want to attempt EC reverse engineering on their own hardware.
 
 ---
 
-*After a year of testing, debugging, and countless revisions, I'm proud to share this solution with the community. What started as personal frustration has evolved into a functional tool that might help other MSI Linux users facing similar challenges. And i hope that if someone needs it, even having other cpu, they could just modify few numbers*
+**After spending a year on this project** - through countless nights of reverse engineering, temperature testing, and debugging - I'm finally proud to share this solution with the community. 
+
+What started as sheer frustration with my laptop's thermal performance has evolved into a functional tool that actually works. 
+
+If you have a different MSI model, the architecture is there - you might just need to modify a few EC addresses. The hard part (understanding how MSI's EC works) is already done.
+
+*From one frustrated MSI Linux user to another - I hope this helps you as much as it helped me.*
