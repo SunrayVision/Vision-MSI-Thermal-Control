@@ -86,6 +86,20 @@ The project structure is designed to be adaptable. While I can't provide active 
 
 What started as sheer frustration with my laptop's thermal performance has evolved into a functional tool that actually works. 
 
+
 If you have a different MSI model, the architecture is there - you might just need to modify a few EC addresses. The hard part (understanding how MSI's EC works) is already done.
 
 *From one frustrated MSI Linux user to another - I hope this helps you as much as it helped me.*
+
+---
+
+## License Notice
+
+This project includes installation or helper files originally derived from
+OpenFreezeCenter, which is licensed under AGPL-3.0.  
+To maintain license compatibility, this project is distributed under the
+**GNU AGPL-3.0 License**.
+
+All new code (reverse engineering, battery mappings, EC tools, etc.) is
+original work by Anthonippillai Vincent Nishan.
+
