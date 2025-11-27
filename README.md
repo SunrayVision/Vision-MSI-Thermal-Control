@@ -1,6 +1,6 @@
 # Vision MSI Thermal Control
 
-MSI Modern 15H AI C1MGT-096IT Linux thermal management - Reverse engineered EC control with fan profiles and battery threshold
+MSI Modern 15H AI C1MG-096IT Linux thermal management - Reverse engineered EC control with fan profiles and battery threshold
 
 ## 🎯 Purpose of this Project
 
