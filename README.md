@@ -76,6 +76,22 @@ If you have a different MSI model, the EC addresses will likely need adjustment.
 
 The core architecture should work - you'll just need to map your specific hardware addresses.
 
+## FYI: Why This Project Exists
+
+This project was created because my laptop (**MSI Modern 15H AI C1MG-096IT**) is not supported by **msi_ec** or **MControlCenter**:
+
+- **msi_ec**: Attempting to load it resulted in: `modprobe: ERROR: could not insert 'msi_ec': Operation not supported`
+Current compatibility status: *Unimplemented*.
+
+- **MControlCenter**: Running the app always gave:  
+[Reddit post about the issue](https://www.reddit.com/r/Ubuntu/comments/1j9frq5/failed_to_load_ec_sys_kernel_module/)
+
+I developed this program to manage and control my system because existing tools didn’t work.  
+If you have a supported laptop, I recommend using **msi_ec** or **MControlCenter**.  
+This project serves as a fallback for unsupported hardware.
+
+---
+
 ## 🔧 For Developers
 
 The project structure is designed to be adaptable. While I can't provide active support for other models, the code is well-documented for those who want to attempt EC reverse engineering on their own hardware.
