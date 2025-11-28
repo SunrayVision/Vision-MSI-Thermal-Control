@@ -82,7 +82,10 @@ Just to clarify things: I didn’t choose msi_ec or MControlCenter not because I
 My model — **MSI Modern 15H AI C1MG-096IT** — is still listed as **Unimplemented** in the official msi_ec compatibility list.  
 When I originally tested it, loading the module always resulted in:`modprobe: ERROR: could not insert 'msi_ec': Operation not supported`.
 
-Only **today** (28/11/25), thanks to a close friend of mine that uses NixOS, he sent me a link as I discovered a GitHub discussion mentioning potential progress for newer MSI laptops. I genuinely didn’t know about this issue before — that’s my mistake for not checking again sooner.  
+Only **today** (28/11/25), thanks to a close friend of mine that uses NixOS, he sent me a link as I discovered a GitHub discussion mentioning potential progress for newer MSI laptops for msi_ec:  
+🔗 **[Fix GitHub Post](https://github.com/BeardOverflow/msi-ec/issues/206#issuecomment-2629161708)**
+
+I genuinely didn’t know about this issue before — that’s my mistake for not checking again sooner.  
 Still, nothing in that thread confirms support for my exact model, and the module continues to fail on my system.
 
 I also attempted to use **MControlCenter**, but it failed on startup with: `Failed to load ec_sys kernel module`
