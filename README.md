@@ -77,18 +77,20 @@ If you have a different MSI model, the EC addresses will likely need adjustment.
 The core architecture should work - you'll just need to map your specific hardware addresses.
 
 ## FYI: Why This Project Exists
+Just to clarify things: I didn’t choose msi_ec or MControlCenter not because I ignored them, but simply because they never worked on my laptop.
 
-This project was created because my laptop (**MSI Modern 15H AI C1MG-096IT**) is not supported by **msi_ec** or **MControlCenter**:
+My model — **MSI Modern 15H AI C1MG-096IT** — is still listed as **Unimplemented** in the official msi_ec compatibility list.  
+When I originally tested it, loading the module always resulted in:`modprobe: ERROR: could not insert 'msi_ec': Operation not supported`.
 
-- **msi_ec**: Attempting to load it resulted in: `modprobe: ERROR: could not insert 'msi_ec': Operation not supported`
-Current compatibility status: *Unimplemented*.
+Only **today** (28/11/25), thanks to a close friend of mine that uses NixOS, he sent me a link as I discovered a GitHub discussion mentioning potential progress for newer MSI laptops. I genuinely didn’t know about this issue before — that’s my mistake for not checking again sooner.  
+Still, nothing in that thread confirms support for my exact model, and the module continues to fail on my system.
 
-- **MControlCenter**: Running the app always gave:  
-[Reddit post about the issue](https://www.reddit.com/r/Ubuntu/comments/1j9frq5/failed_to_load_ec_sys_kernel_module/)
+I also attempted to use **MControlCenter**, but it failed on startup with: `Failed to load ec_sys kernel module`
+Here’s the original Reddit post I made at the time:  
+🔗 **[Failed to load ec_sys kernel module (Reddit Post)](https://www.reddit.com/r/Ubuntu/comments/1j9frq5/failed_to_load_ec_sys_kernel_module/)**
 
-I developed this program to manage and control my system because existing tools didn’t work.  
-If you have a supported laptop, I recommend using **msi_ec** or **MControlCenter**.  
-This project serves as a fallback for unsupported hardware.
+Because neither tool worked for me, I ended up building my own solution out of necessity — not because I wanted to replace or compete with existing projects.  
+If your laptop *is* supported by msi_ec or MControlCenter, I absolutely recommend trying those tools first. My project is simply a fallback for unsupported hardware like mine.
 
 ---
 
